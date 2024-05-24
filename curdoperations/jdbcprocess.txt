@@ -1,0 +1,51 @@
+connecting java application with mysql using maven project
+
+create new maven project in spring tool > next > catelog - internal > 
+select maven quick start(for simple application)/maven web app (for large applications)
+> next > group id, artifact id, project name> finish .
+
+Now add mysql dependency to the newly created maven project
+
+go to maven repositories website > search mysql > choose required version(2nd one) > at bottom click maven and copy the dependency > paste it in new created maven pom.xml file.
+
+Now update the maven project
+
+right click on project > choose maven > update project.
+
+
+//connecting mysql with java app by java project
+
+create new java project
+Download jar file(mysql) frommmaven repositories
+configure the build path of newly created project and attch the jar file to it and finish.
+
+//Add jsp wizard to spring tool
+
+click help  > install new softwares > work with - all available sites > type jsp > select all > finish.
+
+
+//Adding redhat related files
+eclipse marketplace > jboss install
+
+//creating connection btw backend and frontend
+
+<plugins>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-war-plugin</artifactId>
+			<version>3.3.1</version>
+		</plugin>
+		</plugins>
+
+create maven project > add jsp dependency from maven repo > add plugin > update project >
+delete index.jsp 
+--to get missing files
+configure build path >double click jre system library > alternate jre > finish
+
+---creating project
+src/main/java > right click on it > new > other > package > models, services, dbconnecton, servlets > write class in it.
+
+>Generating getter and setters
+
+go to source > generate getters and setters > select all > click public > finish
+
