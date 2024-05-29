@@ -49,3 +49,35 @@ src/main/java > right click on it > new > other > package > models, services, db
 
 go to source > generate getters and setters > select all > click public > finish
 
+>tomcat installation
+
+tomcat download
+version10
+core - 32-bit/64-bit windows service installer
+click all next and install.
+then download first zip from core.
+add tomcat dependency to pom.xml
+
+window>show view > other(search icon below top right corner then search servers) > servers > first one > noserver in terminal click on it > Apache > tomcat 9.1 server > browse > downloads > got until bin > select folder > next > click project > add > finish. right click on it and allow.
+
+Rest API
+
+Install Lombok > 1.18.32 > specify location > sts-4.2.1 release > open > springtoolsuite4 select > install/update > close.
+
+Install postman > windows64bit
+
+New project > spring starter project > dependencies(Lombok, MySQL driver, spring data jpa, spring web,validation) > finish
+
+--to connect backend to database
+src/main/resources > application properties > right click on it > openwith > generic editor spring properties.
+
+spring.application.name=apiapplication
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://localhost:3306/student
+spring.datasource.username=root
+spring.datasource.password=Karthikb@11
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+
+@ -> annotations
