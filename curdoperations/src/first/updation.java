@@ -10,24 +10,28 @@ public class updation {
 	public static final String  Driver = "com.mysql.cj.jdbc.Driver";
 	public static final String  username = "root";
 	public static final String  password = "Karthikb@11";
-	public static final String  url = "jdbc:mysql://localhost:3306/demo";
-	public static Connection conn;
-//	prepare statement
-	public static PreparedStatement pmst;
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		// TODO Auto-generated method stub
 		try {
+			Scanner sc = new Scanner(System.in);
+			System.out.println("enter database name");
+			String  url = "jdbc:mysql://localhost:3306/"+sc.next();
 			Class.forName(Driver);
-			conn = DriverManager.getConnection(url, username, password);
-			String sql = "select * from employee where emp_id = ? ";
-			pmst = conn.prepareStatement(sql);
-			System.out.println("Enter employee id");
-			pmst.setInt(1,sc.nextInt());
-			ResultSet rs = pmst.executeQuery();
-			while(rs.next()) {
-				System.out.println("emp_id"+ rs.getInt("emp_id")+
-						"emp_name" + rs.getString("emp_name")+ "emp_email"+ rs.getString("emp_email"));
+			Connection conn = DriverManager.getConnection(url, username, password);
+			System.out.println("enter table name");
+			String sql = "update "+sc.next()+" set name=?,email=? where id = ?";
+			PreparedStatement pmst = conn.prepareStatement(sql);
+			System.out.println("Enter name");
+			pmst.setString(1, sc.next());
+			System.out.println("enter email");
+			pmst.setString(2, sc.next());
+			System.out.println("enter id");
+			pmst.setInt(3, sc.nextInt());
+			int i = pmst.executeUpdate();
+			if(i>0) {
+				System.out.println("Data updated successfully");
+			}
+			else {
+				System.out.println("check the connection");
 			}
 			pmst.close();
 			conn.close();
