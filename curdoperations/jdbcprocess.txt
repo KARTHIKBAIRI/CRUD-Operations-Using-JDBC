@@ -39,6 +39,11 @@ eclipse marketplace > jboss install
 		</plugins>
 
 
+<%@include file="filename.jsp"%>  --used for packages importing(to insert a file)
+<% %>  --used for writing code
+<%= %>  --used to get the data
+
+
 jdbc and MySQL --backend and database
 jsp(Html) and servlet --front to backend
 jsp + servlet + jdbc + MySQL
