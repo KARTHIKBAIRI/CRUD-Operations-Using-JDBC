@@ -13,19 +13,20 @@ Now update the maven project
 right click on project > choose maven > update project.
 
 
-//connecting mysql with java app by java project
+//connecting mysql with java application by java project
 
 create new java project
-Download jar file(mysql) frommmaven repositories
-configure the build path of newly created project and attch the jar file to it and finish.
+Download jar file(mysql) from maven repositories
+configure the build path of newly created project and attach the jar file to it and finish.
 
 //Add jsp wizard to spring tool
 
-click help  > install new softwares > work with - all available sites > type jsp > select all > finish.
+click help  > install new softwares > work with - all available sites > type jsp > select all > finish.(accept all terms and conditions)
 
 
 //Adding redhat related files
 eclipse marketplace > jboss install
+
 
 //creating connection btw backend and frontend
 
@@ -36,6 +37,13 @@ eclipse marketplace > jboss install
 			<version>3.3.1</version>
 		</plugin>
 		</plugins>
+
+
+jdbc and MySQL --backend and database
+jsp(Html) and servlet --front to backend
+jsp + servlet + jdbc + MySQL
+//eclipse + tomcat (apache)
+MySQL jar, servlet jar, jsp
 
 create maven project > add jsp dependency from maven repo > add plugin > update project >
 delete index.jsp 
