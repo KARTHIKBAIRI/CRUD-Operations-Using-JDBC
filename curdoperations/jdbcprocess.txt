@@ -94,3 +94,30 @@ spring.jpa.show-sql=true
 spring.jpa.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
 
 @ -> annotations
+
+layers in backend
+models - services - dao - repository - controller
+
+dependencies required in backend
+
+MySQL, jpa(built in crud operations), validation(hibernate - existing queries), lombok(annotations,getters,setters), springweb(for project), security(for overiding operations).
+
+update - > RequestBody
+select - > PathVariable
+
+postman
+body -> raw -> json
+
+
+Hibernate
+
+help -> eclipse marketplace -> jboss -> install -> select all -> 
+
+src/main/resources -> ctrl+n -> hibernate -> give configurations -> create
+add dependencies -> hibernate, hibernate core relocation, MySQL
+
+
+security project -------------------
+
+create spring starter project > add dependency (spring security) > enter http://localhost:8080/login
+enter user name as user and password that comes after running application.properties .
