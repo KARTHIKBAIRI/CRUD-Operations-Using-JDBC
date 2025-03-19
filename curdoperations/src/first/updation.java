@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class updation {
 	public static final String  Driver = "com.mysql.cj.jdbc.Driver";
 	public static final String  username = "root";
-	public static final String  password = "Karthikb@11";
+	public static final String  password = "Karthik";
 	public static void main(String[] args) {
 		try {
 			Scanner sc = new Scanner(System.in);
