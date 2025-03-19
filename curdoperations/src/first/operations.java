@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class operations {
 	public static final String Driver = "com.mysql.cj.jdbc.Driver";
 	public static final String username = "root";
-	public static final String password = "Karthikb@11";
+	public static final String password = "Karthik";
 	public static final String url = "jdbc:mysql://localhost:3306/";
 	public static Connection conn;
 //	prepare statement
