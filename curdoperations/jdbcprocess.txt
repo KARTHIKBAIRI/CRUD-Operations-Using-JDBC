@@ -121,3 +121,46 @@ security project -------------------
 
 create spring starter project > add dependency (spring security) > enter http://localhost:8080/login
 enter user name as user and password that comes after running application.properties .
+
+
+-----------------------------------------------------------------------------------------------
+Maven project creation
+
+create maven project > src/main/resources should be shown to create project in that but by default it is not shown, to display that > right click on project> build path> libraries > double click on jre system libraries> alternate jre > select jre
+
+
+To create our project as jar file do this process
+To clean the target file
+right click on project> run as> maven clean
+right click on project> run as> maven build> clean package install (in goals)
+right click on project> run as> maven build> package
+right click on project> run as> maven install
+----------------------------------------------------------------------------------------------
+
+Converting java project to maven project
+
+create a java project > add jar files in build path > create a db connection
+
+-----------------------------------------------------------------------------
+
+
+Hibernate to MySQL connection
+
+create a maven QuickStart project > right click on project > build path > configure new build path> jre system libraries)double click on it)> alternative jre> finish> apply and close
+
+Now update the project> right click on project > maven > update  > force to update
+
+Now add dependencies of hibernate and MySQL in pom.xml an update the project
+
+@Entity for table creation
+@Table(name=) =modify table name 
+@ID - to columns it gives position
+@GeneratedValue(Strategy= GeneratedType.Auto
+@coulmn(name=)=To change column name
+@size(min=, max=) = to provides different characters in password
+@pattern(regexp=) = for provide validations in passwords
+@email = To providing email
+@oneToMany = one to many relation
+@manyToOne = many to one relation
+@NotNull
+@NotEmpty
