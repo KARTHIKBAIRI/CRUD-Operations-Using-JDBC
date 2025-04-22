@@ -164,3 +164,58 @@ Now add dependencies of hibernate and MySQL in pom.xml an update the project
 @manyToOne = many to one relation
 @NotNull
 @NotEmpty
+
+Hibernate webapp------------------------------------------------------------------------
+
+create a maven project and webapp project, build path to get src/main/java
+
+Now add hibernate (core, orm, validator) , jsp, servlet, MySQL dependencies, and update the project
+
+Now write models package import getter, setters, constructors fields and superclass
+
+now create controller package, add these five line
+	
+		StandardServiceRegistry ssr = new StandardServiceRegistryBuilder().configure().build();
+		Metadata md = new MetadataSources(ssr).getMetadataBuilder().build();
+		SessionFactory sf = md.buildSessionFactory();
+		Session s = sf.openSession();
+		Transaction t = s.beginTransaction();
+		t.commit();
+
+now click on help > eclipse marketplace > install jboss > select all > Finish (after the popup> http checkbox> click on trust select).
+
+for database connection > right click on src/main/resources > enter hibernate > select hibernate.config.xml > now enter database dialect (MYSQL) > driver class (com.mysql.cj.jdbc.driver) > enter (root)username and password
+
+Now click on source > write mappings
+
+-------------- crud operations in controller
+save for adding single user (posting of data)
+saveall for multiple users	(post)
+fetch - getby for single user (findByID) for multiple users ( findAllByID), findAll - for fetching complete data
+delete - deleteByID , deleteAllByID , deleteAll
+update - for update
+count
+
+models layer for tabel creation, controller layer for crud operations, database connection using hibernate.cnf.xml
+connect hibernate.cnf.xml with models and then models with controller.
+
+------------------------------------------------------------
+
+To develop spring starter project in eclipse
+
+open start.spring.io > select project maven >  add dependencies (Lombok, MySQL driver, spring data jpa, spring web,validation, spring boot dev tool) > generate > next extract the zip file > Now open eclipse > open project from file system > click directory > select folder > finish.
+run applications properties
+create packages in com.example.demo
+
+
+----------------------------------------------------------
+
+To connect hibernate jpa and MySQL
+
+to do it in sts -> click help  >Install new software > top dropdown > click all available sites > web xml java ee > finish
+ click on src/main/resources> click new folder > (META-INF) > click new xml file > 
+
+
+----------To send project from eclipse to GitHub ----------------
+
+right click on project in eclipse -> properties -> location -> show in system explorer -> right click open gitbash here -> 
