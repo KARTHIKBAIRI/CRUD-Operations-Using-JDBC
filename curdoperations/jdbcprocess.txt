@@ -219,3 +219,8 @@ to do it in sts -> click help  >Install new software > top dropdown > click all 
 ----------To send project from eclipse to GitHub ----------------
 
 right click on project in eclipse -> properties -> location -> show in system explorer -> right click open gitbash here -> 
+
+---------------------------spring mvc---------------------------------
+
+download Lombok > specify location spring sts release.
+create spring starter project > add dependencies (MySQL connector, validation, spring web, spring dev tools, Lombok, thymeleaf, spring data jpa).
